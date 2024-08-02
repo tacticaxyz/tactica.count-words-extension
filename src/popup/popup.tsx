@@ -23,10 +23,10 @@ const App: React.FC<{}> = () => {
             <span>
               <a
                 className="App-link"
-                href="https://optiklab.github.io"
+                href="https://tactica.xyz"
                 target="_blank"
                 rel="noopener noreferrer"
-              >OptikLab (C) {new Date().getFullYear()}</a>
+              >TacTicA.xyz (C) {new Date().getFullYear()}</a>
             </span>
             <span> | Version 1.0.0</span>
           </div>
