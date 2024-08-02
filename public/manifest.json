@@ -25,7 +25,6 @@
     "contextMenus", 
     "storage"
   ],
-  "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
       "js": [
