@@ -28,7 +28,7 @@ const App: React.FC<{}> = () => {
                 rel="noopener noreferrer"
               >TacTicA.xyz (C) {new Date().getFullYear()}</a>
             </span>
-            <span> | Version 1.0.0</span>
+            <span> | Version 1.0.1</span>
           </div>
         </footer>
       </div>
