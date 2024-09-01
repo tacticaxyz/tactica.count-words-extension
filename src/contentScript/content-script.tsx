@@ -36,10 +36,11 @@ chrome.runtime.onMessage.addListener(
                         chrome.storage.local.set({ [key]: stat, "tab_url": tabUrl, "tab_id": tabId }, function() {
 
                             //console.log("Content script - Results has been set to.. " + key);
-                            
                             var response = chrome.runtime.sendMessage("PageStatReady-" + uniquePart, (response) => {
-
-                                //console.log("Content script - PageStatReady message sent! " + response);
+                              response = response || {};
+                              if (!response.status) {
+                                //console.log("Communication failed!"); // Usually, there is exception.
+                              }
                             });
                         });
                         
@@ -53,7 +54,7 @@ chrome.runtime.onMessage.addListener(
             }
 
             //console.log("Content script - sendResponse(true)");
-            sendResponse(true);
+            sendResponse({status: true});
         }
         return true;
     }
